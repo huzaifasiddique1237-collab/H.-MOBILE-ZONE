@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ur">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mobile Accessories Store</title>
+  <style>
+    /* Reset & Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #0f172a;
+      color: #f8fafc;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Header */
+    header {
+      background: linear-gradient(135deg, #1e293b, #0f172a);
+      border-bottom: 1px solid #334155;
+      padding: 1.2rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      background: linear-gradient(90deg, #38bdf8, #818cf8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: #94a3b8;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #38bdf8;
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 3.5rem 1rem 2rem;
+      background: radial-gradient(circle at center, #1e293b 0%, #0f172a 100%);
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.8rem;
+      color: #ffffff;
+    }
+
+    .hero p {
+      color: #94a3b8;
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Products Section */
+    .products-container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 1.5rem;
+      flex: 1;
+    }
+
+    .section-title {
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+      color: #f1f5f9;
+      border-left: 4px solid #38bdf8;
+      padding-left: 0.8rem;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 2rem;
+    }
+
+    /* Product Card */
+    .product-card {
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s, box-shadow 0.3s;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 30px rgba(56, 189, 248, 0.2);
+    }
+
+    .product-img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      background-color: #334155;
+    }
+
+    .product-info {
+      padding: 1.2rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .product-title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #f8fafc;
+      margin-bottom: 0.5rem;
+    }
+
+    .product-desc {
+      font-size: 0.88rem;
+      color: #94a3b8;
+      margin-bottom: 1rem;
+      flex-grow: 1;
+    }
+
+    .product-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: auto;
+    }
+
+    .price {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #38bdf8;
+    }
+
+    .btn-buy {
+      background: linear-gradient(90deg, #0284c7, #2563eb);
+      color: #fff;
+      border: none;
+      padding: 0.6rem 1.2rem;
+      border-radius: 6px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: opacity 0.3s;
+    }
+
+    .btn-buy:hover {
+      opacity: 0.9;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #0b1120;
+      border-top: 1px solid #1e293b;
+      text-align: center;
+      padding: 1.5rem;
+      color: #64748b;
+      font-size: 0.9rem;
+      margin-top: 3rem;
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+      .nav-links {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">Mobile Accessories Store</div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#products">Products</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </header>
+
+  <!-- Hero Banner -->
+  <section class="hero" id="home">
+    <h1>Premium Mobile Accessories</h1>
+    <p>High quality chargers, audio devices, and smart gadgets at best prices in Pakistan.</p>
+  </section>
+
+  <!-- Main Products Section -->
+  <div class="products-container" id="products">
+    <h2 class="section-title">Featured Products</h2>
+    
+    <div class="product-grid">
+      
+      <!-- Product 1 -->
+      <div class="product-card">
+        <!-- Yahan aap apni image ka link ya file name lagayein -->
+        <img src="https://via.placeholder.com/300x220/1e293b/38bdf8?text=Fast+Charger" alt="Fast Charger" class="product-img">
+        <div class="product-info">
+          <div class="product-title">Fast Charging Adapter</div>
+          <div class="product-desc">High speed 65W fast charger with Type-C support.</div>
+          <div class="product-footer">
+            <div class="price">Rs. 1,850 PKR</div>
+            <button class="btn-buy" onclick="orderProduct('Fast Charging Adapter')">Order</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x220/1e293b/38bdf8?text=Wireless+Earbuds" alt="Wireless Earbuds" class="product-img">
+        <div class="product-info">
+          <div class="product-title">Wireless Earbuds Pro</div>
+          <div class="product-desc">Crystal clear audio, noise cancellation, long battery life.</div>
+          <div class="product-footer">
+            <div class="price">Rs. 3,200 PKR</div>
+            <button class="btn-buy" onclick="orderProduct('Wireless Earbuds Pro')">Order</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x220/1e293b/38bdf8?text=Smartwatch" alt="Smartwatch" class="product-img">
+        <div class="product-info">
+          <div class="product-title">HD Display Smartwatch</div>
+          <div class="product-desc">Fitness tracking, heart rate monitor, full touchscreen display.</div>
+          <div class="product-footer">
+            <div class="price">Rs. 4,500 PKR</div>
+            <button class="btn-buy" onclick="orderProduct('HD Display Smartwatch')">Order</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 4 -->
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x220/1e293b/38bdf8?text=Power+Bank" alt="Power Bank" class="product-img">
+        <div class="product-info">
+          <div class="product-title">20000mAh Power Bank</div>
+          <div class="product-desc">Heavy duty power bank with dual USB output ports.</div>
+          <div class="product-footer">
+            <div class="price">Rs. 3,800 PKR</div>
+            <button class="btn-buy" onclick="orderProduct('20000mAh Power Bank')">Order</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2026 Mobile Accessories Store. All rights reserved.
+  </footer>
+
+  <script>
+    function orderProduct(productName) {
+      alert("Aap ne " + productName + " select kiya hai! WhatsApp par contact karein.");
+    }
+  </script>
+</body>
+</html>
