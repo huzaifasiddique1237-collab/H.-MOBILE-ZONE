@@ -223,10 +223,13 @@
       <!-- Product 1 -->
       <div class="product-card">
         <!-- Yahan aap apni image ka link ya file name lagayein -->
-        <img src="https://via.placeholder.com/300x220/1e293b/38bdf8?text=Fast+Charger" alt="Fast Charger" class="product-img">
-        <div class="product-info">
-          <div class="product-title">Fast Charging Adapter</div>
-          <div class="product-desc">High speed 65W fast charger with Type-C support.</div>
+       <img id="main-product1-img" src="https://i.ibb.co/spQZDs4W/8baa22df-41be-4dab-9062-d9adc753082c.jpg" alt="Fast Charger" class="product-img">
+
+<div style="display: flex; gap: 8px; padding: 10px; justify-content: center;">
+  <img src="https://i.ibb.co/spQZDs4W/8baa22df-41be-4dab-9062-d9adc753082c.jpg" style="width: 50px; height: 50px; cursor: pointer; border-radius: 6px; border: 1px solid #ccc;" onclick="document.getElementById('main-product1-img').src=this.src">
+  <img src="https://i.ibb.co/CpbsjHK5/google-30w-usb-c-power-charger1-tejar.jpg" style="width: 50px; height: 50px; cursor: pointer; border-radius: 6px; border: 1px solid #ccc;" onclick="document.getElementById('main-product1-img').src=this.src">
+  <img src="https://i.ibb.co/3wBMB51r/5e52c99b7c9964179867d1f24048115b7-0-jpg-720x720q80.jpg" style="width: 50px; height: 50px; cursor: pointer; border-radius: 6px; border: 1px solid #ccc;" onclick="document.getElementById('main-product1-img').src=this.src">
+</div>
           <div class="product-footer">
             <div class="price">Rs. 1,850 PKR</div>
             <button class="btn-buy" onclick="orderProduct('Fast Charging Adapter')">Order</button>
